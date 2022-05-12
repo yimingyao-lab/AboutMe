@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> My From </title>
+	<meta charset = "utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nmsl">
+		<a href="file:///Users/yimingyao/Desktop/Csci4131/yao00116/Myevents.html"> My Events</a> 
+		
+		<a href = "file:///Users/yimingyao/Desktop/Csci4131/yao00116/MyForm.html"> Form Input</a>
+
+		<a href = "file:///Users/yimingyao/Desktop/Csci4131/yao00116/MyWidgets.html"> My Widgets</a> 
+		
+    </div>
+    <div class="main">
+        <form action="http://www-users.cselabs.umn.edu/~liux4189/echo.php" method="POST">
+            <table id="myform" >
+                <tr>
+                    <th> <label> Event:  </label> </th> 
+                    <td> <input type = "text" id="event" name="event" pattern="[a-zA-Z\s]+" title="Event must be alphanumeric" required>  </td>
+    
+                </tr>
+                <tr>
+                    <th> <label> Day of Week:</label> </th>
+                    <td><select name="day" id = "day">
+                        <option value="Sun"> Sun</option>
+                        <option value="Mon"> Mon</option>
+                        <option value="Tue"> Tue</option>
+                        <option value="Wed"> Wed</option>
+                        <option value="Thur"> Thur</option>
+                        <option value="Fri"> Fri</option>
+                        <option value="Sat"> Sat</option>
+                    </select> </td>
+                </tr>
+                <tr>
+                    <th> <label> Start:  </label> </th>
+                    <td> <input type="time" id="start" name="start"> </td>
+                </tr>
+                <tr>
+                    <th> <label> End: </label> </th>
+                    <td> <input type="time" id = "end" name="end"> </td>
+                </tr>
+            
+                <tr>
+                    <th> <label> Phone: </label> </th>
+                    <td> <input type = "tel" id= "phone" name="phone"></td>
+                </tr>
+                <tr>
+                    <th> <label> Location: </label> </th>
+                    <td> <input type = "text" id="location" name="location"> 
+                    </td>
+                </tr>
+                <tr>
+                    <th> <label> Extra info: </label> </th> 
+                    <td> <input type = "text" id="info" name="info"> </td>
+                </tr>
+                <tr>
+                    <th> <label> Enter URL for the Extra info: </label> </th> 
+                    <td> <input type = "url" id="url" name="url"> </td>
+                </tr>
+                <tr>
+                    <th> </th>
+                    <td> <input type ="submit" value = "Submit"> </td>
+                </tr>
+            </table>    
+        </form>
+    </div>
+    <div id="map"> </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABhe7YC-eCRcUx7QiqgJdbF-Lw2jG8kS4&callback&callback=initMap&libraries=places&v=weekly"> </script>
+    <script src="geocode.js"></script>
+</body>
+
+
+</html>
