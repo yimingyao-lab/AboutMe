@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title> My Weekly Events </title>
+	<meta charset = "utf-8" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="event">
+	<div class="nmsl">
+		<a href="myevent.html"> My Events</a> 
+		
+		<a href = "MyForm.html"> Form Input</a>
+
+		<a href = "MyWidgets.html"> My Widgets</a> 
+		
+	</div>
+	
+	<h1> My Weekly Events </h1>
+	<table id="myevent">
+		<tr>
+		  <th> Day </th>
+		  <th> Event </th>
+		  <th> Time </th>
+		  <th> Event Location(Virtual or Physical)</th>
+		  <th> Contact Email or Phone Number  </th>
+		  <th> URL </th>
+	    </tr>
+		<tr>
+		  <th> Monday</th>
+		  <td> CSCI 4131 </td>
+		  <td> 9:45am - 11:00am </td>
+		  <td> 
+			Virtual Zoom 
+		  </td> 
+		  <td> csci4131help-f20@umn.edu </td>
+		  <td> <a href = "https://umn.zoom.us/j/97477641187?pwd=QXJkNTI0bDQxdEM0S2w2bnR5cVo1UT09#success"> CSCI4131 Zoom Link</a> </td>
+		</tr>
+		<tr>
+		  <th> Tuesday </th>
+		  <td> STAT 4101 </td>
+		  <td> 2:30pm - 3:20pm</td>
+		  <td> 
+			Virtual Zoom 
+		  </td> 
+		  <td> qqin@umn.edu </td>
+		  <td> <a href="https://umn.zoom.us/j/92550923747?pwd=VENhQm1ldDRuVG44dzRacHJ1RXNGdz09#success"> STAT4101 Zoom Link</a></td>
+		</tr>
+		<tr>
+		  <th> Wednesday </th>
+		  <td> Basketball </td>
+		  <td> 3:00pm - 6:00pm</td>
+		  <td> 
+			123 SE Harvard St, <br> Minneapolis, MN 55455 <br/>
+		</td>
+		  <td> None</td>
+		  <td> <a href="http://recwell.umn.edu/"> Rec Center info</a></td>
+		</tr>
+		<tr>
+			
+		  <th> Thursday </th>
+		  <td> CSCI 3081W</td>
+		  <td> 9:45am - 11:00am</td>
+		  <td> 
+			Virtual Zoom
+		  </td> 
+		  <td> mfazzini@umn.edu </td>
+		  <td> <a href="https://umn.zoom.us/j/97888575025?pwd=VmZvRlhzRU5ZY1hTSmI5bDAxcDh4dz09#success"> CSCI 3081W Zoom Link</a></td>
+		</tr>
+
+		<tr>
+		  <th> Firday </th>
+		  <td> NBA Regular Season</td>
+		  <td> 6:00pm - 9:00pm</td>
+		  <td> 
+			600 N 1st Ave, <br> Minneapolis, MN, 55403 <br/>
+		  </td> 
+		  <td> (612) 673-1300</td>
+		  <td> <a href="https://www.targetcenter.com/"> Target Center info</a> </td>
+		</tr>
+		<tr>
+		  <th> Saturday </th>
+		  <td> Mall of America </td>
+		  <td> 1:00pm - 4:00pm</td>
+		  <td> 
+			60 E Broadway, <br> Bloomington, MN 55425 <br/>
+		  </td>
+		  <td> (952) 883-8800</td>
+		  <td> <a href="https://mallofamerica.com/"> Mall of America Website</a></td>
+		</tr>
+		<tr>
+		  <th> Sunday </th>
+		  <td> STAT 3021</td>
+		  <td> 8:00am - 10:00am <br> 1:00pm - 3:00pm <br/> </td>
+		  <td> 
+			Online Course
+		  </td>
+		  <td> parky@umn.edu</td>
+		  <td> <a href="https://canvas.umn.edu/courses/191839"> STAT 3021 Canvas Link </a></td>
+		</tr>
+	</table>
+	<img id = "big" src="gophers-mascot.png" alt="gophers-mascot" height="220" width="220" />
+	<script src="changingpic.js"></script>
+	<button onclick= "start()"> start</button>
+	<button onclick= "clearInterval(int)"> stop</button>
+				<div id="map"> </div>
+				<script src="googlemaps.js"></script>
+				<div id="information"> 
+						<strong>Find: </strong>
+						<select id="select" onchange="change()"> 
+							<option> Please Choose the Options</option>
+							<option value="restaurant"> restaurant</option>
+							<option value="hospital"> hospital</option>
+							<option value="parking"> parking</option>
+							<option value="supermarket"> supermarket</option>
+							<option value="other"> other</option>
+						</select>
+						<p><input id="DIY" type="text" placeholder="Enter other places" disabled></p>
+						<p>
+							<strong> in </strong>
+							<input id="input" type="number">
+							<strong> meters</strong>	
+						</p>
+						<button onclick="nearby();"> search </button>
+					<strong>Direction to: </strong>
+					<input id="end" type="text">
+					<strong> By: </strong>
+					<select id="mode">
+						<option value="DRIVING"> Driving</option>
+						<option value="WALKING"> Walking</option>
+						<option value="BICYCLING"> Bicycling</option>
+						<option value="TRANSIT"> Transit</option>
+					</select>
+					<button onclick="calcRoute();"> Go</button>
+				</div>
+				<div id="directionsPanel"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABhe7YC-eCRcUx7QiqgJdbF-Lw2jG8kS4&callback=initMap&libraries=places" async defer> </script>
+
+</body>
+
+</html>
