@@ -1,75 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>BMI Calculator</title>
-        <meta charset="utf-8"/>
-        <style>
-            input { width: 100px; } .row { width: 400px; } 
-            .height-div { width: 200px; }
-            .red { color: red; } .yellow { color: yellow; }
-            .orange { color: orange; } .green { color: green; }
-            #feet-div { 
-               
-
-               }
-            #inches-div { 
-              }
-        </style>
+        <link rel = "stylesheet" href="study.css"></link>
     </head>
-    <body>
-        <div class="all">
-            <div class="row">
-                <div id="feet-div" class="height-div"> 
-                    <input type="text" id="feet"> feet
-                </div>
-                <div id="inches-div" class="height-div"> 
-                    <input type="text" id="inches"> inches 
-                </div>
-            </div>
-            <div class="row" style="clear:both;">
-                <div id="pounds-div"> 
-                    <input type="text" id="pounds"> pounds 
-                </div>
-            </div>
-            <div class="row"> <button id="btn"> Calculate BMI </button> </div>
-            <div class="row"> Your BMI is <span id="results"></span> </div>
-        </div>
-    </body>
-    <script>
-        window.onload = function() {
-            var clickEventHandler = function () {
-                return function() {
-                    var feet  = document.getElementById('feet');
-                        inches = document.getElementById('inches');  
-                        pounds = document.getElementById('pounds')
-                    var height = parseFloat(feet) * 12 + parseFloat(inches),
-                        weight = parseFloat(pounds),
-                        BMI = 703 * weight / (height * height);
-                    // document.getElementById('results').innerHTML = BMI
-                    if(BMI < 18.5){
-                        document.getElementById('results').innerHTML = BMI
-                       
-                        document.getElementById("results").style.color = "yellow";
-                    }
-                    else if(BMI<25){
-                        document.getElementById('results').innerHTML = BMI
-                        document.getElementById("results").style.color = "green";
-                       
-                    }
-                    else if(BMI<30){
-                        document.getElementById('results').innerHTML = BMI
-                        document.getElementById("results").style.color = "orange";
-                        
-                    }
-                    else{
-                        document.getElementById('results').innerHTML = BMI
-                        document.getElementById("results").style.color = "red";
-                    }
-                };
-            };
-            document.getElementById('btn').onclick = clickEventHandler();
-        }; // end window onload code
-    </script>
+<body>
+    
+    <ul>
+    <li> <a class="active" href="#About"><img src = "Icon/avatar.png" width = "18" height = "18"/> About</a></li>
+    <li><a href="#Education"><img src = "Icon/education.png" width = "18" height = "18"/> Education</a></li>
+    <li><a href="#CV"><img src = "Icon/cv.png" width = "18" height = "18"/> CV</a></li>
+    <li><a href="#Experience"><img src = "Icon/computer.png" width = "18" height = "18"/> Experience</a></li>
+    <li><a href="#Projects"><img src = "Icon/project.png" width = "18" height = "18"/> Projects</a></li>
+    <li><a href="#Hobbies"><img src = "Icon/hobby.png" width = "18" height = "18"/> Hobbies</a></li>
+    <li><a href="#Contact"><img src = "Icon/phone.png" width = "18" height = "18"/> Contact</a></li>
+    </ul>
 
+    <div style="margin-left:50%; padding:1px 16px;height:50px;">
+        <h2>Yiming Yao</h2>
+    </div>
+
+    <div style="margin-left:22%; height:px;">
+        <p><img src = "Icon/yiming.JPG" width = "300" height = "450"/></p>
+    </div>
+    
+    
+   
+    <footer>
+        <p>Last Updated: May 2022</p>
+        <p>Copyright (c) 2022 Yiming Yao</p> 
+    </footer>
+
+
+    
+    
+    
+
+</body>
+<!-- <footer>
+    &copy; Copyright 2022 Yiming Yao
+</footer> -->
 </html>
+
 
