@@ -6,7 +6,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 20%;
+    width: 15.5%;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
@@ -15,18 +15,18 @@ body {
 
     li a {
     display: block;
-    color: #000;
+    color:white;
     padding: 8px 16px;
     text-decoration: none;
     }
 
     li a.active {
-    background-color: #04AA6D;
-    color: white;
+    background-color:rgb(13, 155, 13);
+    color:white;
     }
 
     li a:hover:not(.active) {
-    background-color: #555;
+    background-color: orange;
     color: white;
     }
 
