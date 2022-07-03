@@ -3,11 +3,39 @@
     <head>
         <link rel = "stylesheet" href="study.css"></link>
         <style>
-            #p{
-                
+            #p{ 
                 display: flex;
                 flex-wrap: wrap;
-                
+            }
+
+            .grid-container{
+                display: grid;
+                gap: 50px;
+                grid-template-columns: auto auto;
+                margin-right: 5%;
+                background-color: orange;
+                padding: 10px;
+                height: auto;
+            }
+
+            .grid-item{
+                background-color: azure;
+                padding: 20px;
+                font-size: 15px;
+                text-align: center;
+                border: 5px;
+            }
+
+            .comment{
+                background-color: azure;
+                padding: 20px;
+                font-size: 20px;
+                text-align: left;
+                border: 5px;
+            }
+
+            #nmsl{
+                font-size: 17.5px;
             }
         </style>
     </head>
@@ -24,30 +52,53 @@
     <li><a href="Contact.html"><img src = "Icon/phone.png" width = "18" height = "18"/> Contact</a></li>
     </ul>
 
-    <div style="margin-left:20%; padding:1px 16px;height:100px;">
-        <h2>Project</h2>
+    <div style="margin-left:18%; padding:1px 16px;height:100px;">
+        <h1>Projects --- Still in Progressing</h1>
 
     </div>
-        <div style="margin-left:20%;"> 
-            <ol id="p">
-                <li>
-                    <p style="text-align: center;"> Mathematical Measures to Estimate Partisan Gerrymandering</p>
-                    <img src="Icon/Gerry.jpg" width="550", height="250"> 
-                </li> 
-
-                <li style="margin-left:6%;">
-                    <p style="text-align: center;"> Mathematical Measures to Estimate Partisan Gerrymandering</p>
-                    <img src="Icon/Gerry.jpg" width="330", height="165"> 
-                </li> 
-            </ol>
-
+    <div style="margin-left:18%;" class="grid-container">
+        <div class= "grid-item"> 
+            <h2> Mathematical Measures to Estimate Partisan Gerrymandering</h2>
+            <h2 id="nmsl"> Spatial Data Science Reasearch</h2>
+            <img src="Icon/Gerry.jpg" width="400px" height="200px">
+            <p> Abstract: We explore the rationality for each proposed redistricting plan based on its cumulative score of partisan bias.</p>
         </div>
-   
-    <footer>
-        <p>Last Updated: July 2022</p>
-        <p>Copyright (c) 2022 Yiming Yao</p> 
-    </footer>
+        <div class= "comment">
+            <p> <a href="gerry/report.pdf">Final Report</a></p>
+            <p> <a href="gerry/slide.pdf">Final Presentation </a></p>
+            <p> <a href="gerry/dataset.pdf">Dataset </a></p>
+            <p> <a href="gerry/calculate.pdf">Supplementary Information</a></p>
+        </div>
+        <div class= "grid-item">
+            <h2> The Visalization of the St. Paul's City Budgets Through Using Effective, Interactive Techniques</h2>
+            <h2 id="nmsl"> Csci 5609 Visalization</h2>
+            <img src="Icon/vs.jpg" width="400px" height="200px">
+        </div>
+         
+        <div class= "comment">
+            <p> <a>Video Report</a></p>
+            <p> <a>Slides </a></p>
+            <p> <a>Sources Code </a></p>
+            <p> <a> Readme</a></p>
+        </div>
 
+        <div class= "grid-item">
+            <h2> Career Fair Simulation in Virtual Reality</h2>
+            <h2 id="nmsl"> Csci 5619 Virtual Reality and 3D Interaction</h2>
+            <img src="Icon/vvv.jpg" width="400px" height="200px">
+        </div>
+        <div class= "comment">
+            <p> <a>Video Report</a></p>
+            <p> <a>Slides </a></p>
+            <p> <a>Sources Code </a></p>
+            <p> <a> Readme</a></p>
+        </div>
+        <div class= "grid-item"> 4 </div>
+        <div class= "grid-item"> 4 </div>  
+
+    </div>
+   
+    
 
     
     
